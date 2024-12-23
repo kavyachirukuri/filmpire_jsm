@@ -43,7 +43,6 @@ const Sidebar = ({ setMobileOpen }) => {
   const { data, isFetching } = useGetGenresQuery();
   const dispatch = useDispatch();
   // console.log("data", data);
-  console.log("genreIdOrCategoryName", genreIdOrCategoryName);
   return (
     <>
       <Link to="/" className={classes.imageLink}>
@@ -60,8 +59,6 @@ const Sidebar = ({ setMobileOpen }) => {
           <Link key={value} className={classes.links} to="/">
             <ListItem
               onClick={() => {
-                console.log("value", value);
-                console.log("category is clicked");
                 dispatch(selectGenreOrCategory(value));
               }}
               type="button"
